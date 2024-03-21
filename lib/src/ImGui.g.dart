@@ -68,6 +68,7 @@ import 'ImGuiTextRange.g.dart';
 
 DynamicLibrary initializeImGui() {
   var dll = '';
+  const dir = "./dependencies";
 
   if (Platform.isWindows) {
     dll = 'cimgui64.dll';
@@ -79,7 +80,7 @@ DynamicLibrary initializeImGui() {
     throw Exception('Unsupported platform');
   }
 
-  return DynamicLibrary.open(dll);
+  return DynamicLibrary.open("$dir/$dll");
 }
 
 final _cimgui = initializeImGui();
