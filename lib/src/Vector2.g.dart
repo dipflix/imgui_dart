@@ -1,11 +1,9 @@
 import 'dart:ffi';
 
-base class Vector2 extends Struct {
-  
+base class ImVector2 extends Struct {
   @Float()
   external double x;
-  
+
   @Float()
   external double y;
-  
 }

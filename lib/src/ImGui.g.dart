@@ -15,7 +15,7 @@ import 'ImGuiTreeNodeFlags.g.dart';
 import 'ImVec4.g.dart';
 import 'ImGuiColorEditFlags.g.dart';
 import 'Vector3.g.dart';
-import 'Vector4.g.dart';
+import 'ImVector4.g.dart';
 import 'ImFontAtlas.g.dart';
 import 'ImGuiCol.g.dart';
 import 'ImGuiDockNodeFlags.g.dart';
@@ -655,13 +655,13 @@ late final _igColorConvertU32ToFloat4 = _cimgui.lookupFunction<
 ///  ImGuiColorEditFlags flags
 /// );
 ///```
-int igColorEdit3(Pointer<Uint8> label, Pointer<Vector3> col, int flags) =>
+int igColorEdit3(Pointer<Uint8> label, Pointer<ImVector3> col, int flags) =>
     _igColorEdit3(label, col, flags);
 
 late final _igColorEdit3 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector3> col, Uint32 flags),
-    int Function(
-        Pointer<Uint8> label, Pointer<Vector3> col, int flags)>('igColorEdit3');
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector3> col, Uint32 flags),
+    int Function(Pointer<Uint8> label, Pointer<ImVector3> col,
+        int flags)>('igColorEdit3');
 
 ///```c
 /// byte igColorEdit4(
@@ -685,12 +685,12 @@ late final _igColorEdit4 = _cimgui.lookupFunction<
 ///  ImGuiColorEditFlags flags
 /// );
 ///```
-int igColorPicker3(Pointer<Uint8> label, Pointer<Vector3> col, int flags) =>
+int igColorPicker3(Pointer<Uint8> label, Pointer<ImVector3> col, int flags) =>
     _igColorPicker3(label, col, flags);
 
 late final _igColorPicker3 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector3> col, Uint32 flags),
-    int Function(Pointer<Uint8> label, Pointer<Vector3> col,
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector3> col, Uint32 flags),
+    int Function(Pointer<Uint8> label, Pointer<ImVector3> col,
         int flags)>('igColorPicker3');
 
 ///```c
@@ -947,16 +947,16 @@ late final _igDragFloat = _cimgui.lookupFunction<
 ///  ImGuiSliderFlags flags
 /// );
 ///```
-int igDragFloat2(Pointer<Uint8> label, Pointer<Vector2> v, double v_speed,
+int igDragFloat2(Pointer<Uint8> label, Pointer<ImVector2> v, double v_speed,
         double v_min, double v_max, Pointer<Uint8> format, int flags) =>
     _igDragFloat2(label, v, v_speed, v_min, v_max, format, flags);
 
 late final _igDragFloat2 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector2> v, Float v_speed,
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector2> v, Float v_speed,
         Float v_min, Float v_max, Pointer<Uint8> format, Uint32 flags),
     int Function(
         Pointer<Uint8> label,
-        Pointer<Vector2> v,
+        Pointer<ImVector2> v,
         double v_speed,
         double v_min,
         double v_max,
@@ -974,16 +974,16 @@ late final _igDragFloat2 = _cimgui.lookupFunction<
 ///  ImGuiSliderFlags flags
 /// );
 ///```
-int igDragFloat3(Pointer<Uint8> label, Pointer<Vector3> v, double v_speed,
+int igDragFloat3(Pointer<Uint8> label, Pointer<ImVector3> v, double v_speed,
         double v_min, double v_max, Pointer<Uint8> format, int flags) =>
     _igDragFloat3(label, v, v_speed, v_min, v_max, format, flags);
 
 late final _igDragFloat3 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector3> v, Float v_speed,
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector3> v, Float v_speed,
         Float v_min, Float v_max, Pointer<Uint8> format, Uint32 flags),
     int Function(
         Pointer<Uint8> label,
-        Pointer<Vector3> v,
+        Pointer<ImVector3> v,
         double v_speed,
         double v_min,
         double v_max,
@@ -2341,14 +2341,14 @@ late final _igInputFloat = _cimgui.lookupFunction<
 ///  ImGuiInputTextFlags flags
 /// );
 ///```
-int igInputFloat2(Pointer<Uint8> label, Pointer<Vector2> v,
+int igInputFloat2(Pointer<Uint8> label, Pointer<ImVector2> v,
         Pointer<Uint8> format, int flags) =>
     _igInputFloat2(label, v, format, flags);
 
 late final _igInputFloat2 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector2> v,
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector2> v,
         Pointer<Uint8> format, Uint32 flags),
-    int Function(Pointer<Uint8> label, Pointer<Vector2> v,
+    int Function(Pointer<Uint8> label, Pointer<ImVector2> v,
         Pointer<Uint8> format, int flags)>('igInputFloat2');
 
 ///```c
@@ -2359,14 +2359,14 @@ late final _igInputFloat2 = _cimgui.lookupFunction<
 ///  ImGuiInputTextFlags flags
 /// );
 ///```
-int igInputFloat3(Pointer<Uint8> label, Pointer<Vector3> v,
+int igInputFloat3(Pointer<Uint8> label, Pointer<ImVector3> v,
         Pointer<Uint8> format, int flags) =>
     _igInputFloat3(label, v, format, flags);
 
 late final _igInputFloat3 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector3> v,
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector3> v,
         Pointer<Uint8> format, Uint32 flags),
-    int Function(Pointer<Uint8> label, Pointer<Vector3> v,
+    int Function(Pointer<Uint8> label, Pointer<ImVector3> v,
         Pointer<Uint8> format, int flags)>('igInputFloat3');
 
 ///```c
@@ -4536,14 +4536,14 @@ late final _igSliderFloat = _cimgui.lookupFunction<
 ///  ImGuiSliderFlags flags
 /// );
 ///```
-int igSliderFloat2(Pointer<Uint8> label, Pointer<Vector2> v, double v_min,
+int igSliderFloat2(Pointer<Uint8> label, Pointer<ImVector2> v, double v_min,
         double v_max, Pointer<Uint8> format, int flags) =>
     _igSliderFloat2(label, v, v_min, v_max, format, flags);
 
 late final _igSliderFloat2 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector2> v, Float v_min,
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector2> v, Float v_min,
         Float v_max, Pointer<Uint8> format, Uint32 flags),
-    int Function(Pointer<Uint8> label, Pointer<Vector2> v, double v_min,
+    int Function(Pointer<Uint8> label, Pointer<ImVector2> v, double v_min,
         double v_max, Pointer<Uint8> format, int flags)>('igSliderFloat2');
 
 ///```c
@@ -4556,14 +4556,14 @@ late final _igSliderFloat2 = _cimgui.lookupFunction<
 ///  ImGuiSliderFlags flags
 /// );
 ///```
-int igSliderFloat3(Pointer<Uint8> label, Pointer<Vector3> v, double v_min,
+int igSliderFloat3(Pointer<Uint8> label, Pointer<ImVector3> v, double v_min,
         double v_max, Pointer<Uint8> format, int flags) =>
     _igSliderFloat3(label, v, v_min, v_max, format, flags);
 
 late final _igSliderFloat3 = _cimgui.lookupFunction<
-    Uint8 Function(Pointer<Uint8> label, Pointer<Vector3> v, Float v_min,
+    Uint8 Function(Pointer<Uint8> label, Pointer<ImVector3> v, Float v_min,
         Float v_max, Pointer<Uint8> format, Uint32 flags),
-    int Function(Pointer<Uint8> label, Pointer<Vector3> v, double v_min,
+    int Function(Pointer<Uint8> label, Pointer<ImVector3> v, double v_min,
         double v_max, Pointer<Uint8> format, int flags)>('igSliderFloat3');
 
 ///```c
@@ -7874,8 +7874,8 @@ int ImFontAtlas_GetMouseCursorTexData(
         int cursor,
         Pointer<ImVec2> out_offset,
         Pointer<ImVec2> out_size,
-        Pointer<Vector2> out_uv_border,
-        Pointer<Vector2> out_uv_fill) =>
+        Pointer<ImVector2> out_uv_border,
+        Pointer<ImVector2> out_uv_fill) =>
     _ImFontAtlas_GetMouseCursorTexData(
         self, cursor, out_offset, out_size, out_uv_border, out_uv_fill);
 
@@ -7885,15 +7885,15 @@ late final _ImFontAtlas_GetMouseCursorTexData = _cimgui.lookupFunction<
         Uint32 cursor,
         Pointer<ImVec2> out_offset,
         Pointer<ImVec2> out_size,
-        Pointer<Vector2> out_uv_border,
-        Pointer<Vector2> out_uv_fill),
+        Pointer<ImVector2> out_uv_border,
+        Pointer<ImVector2> out_uv_fill),
     int Function(
         Pointer<ImFontAtlas> self,
         int cursor,
         Pointer<ImVec2> out_offset,
         Pointer<ImVec2> out_size,
-        Pointer<Vector2> out_uv_border,
-        Pointer<Vector2> out_uv_fill)>('ImFontAtlas_GetMouseCursorTexData');
+        Pointer<ImVector2> out_uv_border,
+        Pointer<ImVector2> out_uv_fill)>('ImFontAtlas_GetMouseCursorTexData');
 
 ///```c
 /// void ImFontAtlas_GetTexDataAsAlpha8(

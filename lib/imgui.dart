@@ -75,5 +75,5 @@ export "src/Vector2.g.dart";
 export "src/ImGuiListClipper.g.dart";
 export "src/Vector3.g.dart";
 export "src/ImGuiMouseButton.g.dart";
-export "src/Vector4.g.dart";
+export "src/ImVector4.g.dart";
 export "src/ImGuiMouseCursor.g.dart";
