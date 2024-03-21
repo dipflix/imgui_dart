@@ -1,0 +1,33 @@
+class ImGuiStyleVar {
+  static const int Alpha = 0;
+  static const int DisabledAlpha = 1;
+  static const int WindowPadding = 2;
+  static const int WindowRounding = 3;
+  static const int WindowBorderSize = 4;
+  static const int WindowMinSize = 5;
+  static const int WindowTitleAlign = 6;
+  static const int ChildRounding = 7;
+  static const int ChildBorderSize = 8;
+  static const int PopupRounding = 9;
+  static const int PopupBorderSize = 10;
+  static const int FramePadding = 11;
+  static const int FrameRounding = 12;
+  static const int FrameBorderSize = 13;
+  static const int ItemSpacing = 14;
+  static const int ItemInnerSpacing = 15;
+  static const int IndentSpacing = 16;
+  static const int CellPadding = 17;
+  static const int ScrollbarSize = 18;
+  static const int ScrollbarRounding = 19;
+  static const int GrabMinSize = 20;
+  static const int GrabRounding = 21;
+  static const int TabRounding = 22;
+  static const int TabBarBorderSize = 23;
+  static const int ButtonTextAlign = 24;
+  static const int SelectableTextAlign = 25;
+  static const int SeparatorTextBorderSize = 26;
+  static const int SeparatorTextAlign = 27;
+  static const int SeparatorTextPadding = 28;
+  static const int DockingSeparatorSize = 29;
+  static const int COUNT = 30;
+}
