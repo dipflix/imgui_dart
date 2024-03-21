@@ -1,6 +1,6 @@
 name: imgui_dart
 description: imgui 1.90.1
-version: 0.0.1
+version: 0.0.1+2
 
 environment:
   sdk: ^3.3.1
